@@ -24,11 +24,8 @@ class TestArriesgarLetra(unittest.TestCase):
         self.assertFalse(resultado)
 
     def test_VidaPerdida(self):
-        resultado = juego.arriesgaLetra("h")
-        vidas1 = juego.getVidas()
-        resultado = juego.arriesgaLetra("x")
-        vidas2 = juego.getVidas()
-        self.assertNotEqual(vidas1, vidas2)
+        juego.arriesgaLetra("x")
+        self.assertLess(juego.getVidas(), 5)
 
 
 
