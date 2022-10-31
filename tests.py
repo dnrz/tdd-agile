@@ -1,32 +1,23 @@
 import unittest
 from ahorcado import Ahorcado
-global juego
-juego = Ahorcado('hola')
-
+JUEGO = Ahorcado('hola')
 class TestArriesgarPalabra(unittest.TestCase):
-    
-    def test_PalabraCorrecta(self):
-        resultado = juego.arriesgarPalabra('hola')
+    def test_palabra_correcta(self):
+        resultado = JUEGO.arriesgar_palabra('hola')
         self.assertTrue(resultado)
-
-    def test_PalabraEquivocada(self):
-        resultado = juego.arriesgarPalabra('chau')
+    def test_palabra_equivocada(self):
+        resultado = JUEGO.arriesgar_palabra('chau')
         self.assertFalse(resultado)
-    
 class TestArriesgarLetra(unittest.TestCase):
-    
-    def test_LetraCorrecta(self):
-        resultado = juego.arriesgaLetra("h")
+    def test_letra_correcta(self):
+        resultado = JUEGO.arriesga_letra("h")
         self.assertTrue(resultado)
-
-    def test_LetraIncorrecta(self):
-        resultado = juego.arriesgaLetra("x")
+    def test_letra_incorrecta(self):
+        resultado = JUEGO.arriesga_letra("x")
         self.assertFalse(resultado)
-
-    def test_VidaPerdida(self):
-        juego.arriesgaLetra("x")
-        self.assertLess(juego.getVidas(), 5)
-
+    def test_vida_perdida(self):
+        JUEGO.arriesga_letra("x")
+        self.assertLess(JUEGO.get_vidas(), 5)
 
 
 if __name__ == '__main__':
