@@ -4,23 +4,14 @@ class Ahorcado:
         self.palabra = palabra
         self.vidas = 5
     def get_vidas(self):
-        """ 
-        Get vidas 
-        """
         return self.vidas
 
     def arriesgar_palabra(self, palabra_sugerida):
-        """ 
-        Arriesgar Palabras 
-        """
         if self.palabra == palabra_sugerida:
             return True
         return False
 
     def arriesga_letra(self, letra_sugerida):
-        """ 
-        Arriesgar Letra 
-        """
         palabra_jugador = []
         respuesta = False
         for i in range(len(self.palabra)-1):
