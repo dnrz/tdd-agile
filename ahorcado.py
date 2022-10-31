@@ -25,4 +25,3 @@ class Ahorcado:
             self.vidas -= 1
 
         return respuesta
-
