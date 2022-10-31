@@ -9,26 +9,26 @@ class Ahorcado:
         """
         return self.vidas
 
-    def arriesgar_palabra(self, palabraSugerida):
+    def arriesgar_palabra(self, palabra_sugerida):
         """ 
         Arriesgar Palabras 
         """
-        if self.palabra == palabraSugerida:
+        if self.palabra == palabra_sugerida:
             return True
         return False
 
-    def arriesga_letra(self, letraSugerida):
+    def arriesga_letra(self, letra_sugerida):
         """ 
         Arriesgar Letra 
         """
-        palabraJugador = []
+        palabra_jugador = []
         respuesta = False
         for i in range(len(self.palabra)-1):
-            palabraJugador.append(0)
+            palabra_jugador.append(0)
 
         for i in range(len(self.palabra)-1):
-            if self.palabra[i] == letraSugerida:
-                palabraJugador[i] = letraSugerida
+            if self.palabra[i] == letra_sugerida:
+                palabra_jugador[i] = letra_sugerida
                 respuesta = True
         if not respuesta:
             self.vidas -= 1
