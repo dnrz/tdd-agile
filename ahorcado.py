@@ -3,17 +3,24 @@ class Ahorcado:
     def __init__(self, palabra):
         self.palabra = palabra
         self.vidas = 5
-    
-    def getVidas(self):
+    def get_vidas(self):
+        """ 
+        Get vidas 
+        """
         return self.vidas
 
-    def arriesgarPalabra(self, palabraSugerida):
+    def arriesgar_palabra(self, palabraSugerida):
+        """ 
+        Arriesgar Palabras 
+        """
         if self.palabra == palabraSugerida:
             return True
-        else:
-            return False
+        return False
 
-    def arriesgaLetra(self, letraSugerida):
+    def arriesga_letra(self, letraSugerida):
+        """ 
+        Arriesgar Letra 
+        """
         palabraJugador = []
         respuesta = False
         for i in range(len(self.palabra)-1):
@@ -23,7 +30,7 @@ class Ahorcado:
             if self.palabra[i] == letraSugerida:
                 palabraJugador[i] = letraSugerida
                 respuesta = True
-        if respuesta == False:
+        if not respuesta:
             self.vidas -= 1
 
         return respuesta
