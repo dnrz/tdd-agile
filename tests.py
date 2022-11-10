@@ -1,9 +1,9 @@
 import unittest
 from ahorcado import Ahorcado
-JUEGO = Ahorcado('hola')
+JUEGO = Ahorcado('hello')
 class TestArriesgarPalabra(unittest.TestCase):
     def test_palabra_correcta(self):
-        resultado = JUEGO.arriesgar_palabra('hola')
+        resultado = JUEGO.arriesgar_palabra('hello')
         self.assertTrue(resultado)
     def test_palabra_equivocada(self):
         resultado = JUEGO.arriesgar_palabra('chau')
