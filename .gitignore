@@ -330,4 +330,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#EDITORS
+
+.idea/
+.vscode/
+
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,python,flask,linux
