@@ -1,8 +1,10 @@
+import random
 from behave import *
 from ahorcado import Ahorcado
-import random
 
 PALABRAS = ['hola']
+JUEGO = Ahorcado(random.choice(PALABRAS))
+RESULTADO = True
 
 @given('Una partida con una palabra a adivinar')
 def step_partida(context):
