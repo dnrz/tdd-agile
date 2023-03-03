@@ -335,5 +335,6 @@ $RECYCLE.BIN/
 .idea/
 .vscode/
 
+myenv/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,python,flask,linux
