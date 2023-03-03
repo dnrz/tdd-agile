@@ -1,5 +1,5 @@
 import random
-from behave import *
+from behave import given, when, then
 from ahorcado import Ahorcado
 
 PALABRAS = ['hola']
