@@ -11,13 +11,6 @@ def index():
     #        JUEGO.arriesga_letra('x')
     #        if JUEGO.vidas == 0:
     #            return 'PERDISTE'
-	#        blanks = 0
-	#        to_display = []
-	#	    if char==" ":
-	#		    to_display.append(" ")
-	#	     else:
-	#		    to_display.append("_")
-	#		    blanks+=1
     return render_template('game.html',to_display=JUEGO.palabra,tries=JUEGO.vidas)
 
 if __name__ == "__main__":
