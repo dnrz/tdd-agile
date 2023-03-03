@@ -1,6 +1,5 @@
 from behave import *
 from ahorcado import Ahorcado
-import unittest
 
 @given('Una partida con una palabra a adivinar')
 def step_partida(self):
@@ -30,19 +29,19 @@ def step_palabra_correcta(context):
 @then('Se muestra mensaje de felicitacion porque adivine la letra')
 def step_resultado(context):
     if resultado:
-        assert 'Bien! Letra correcta'
+        return 'Bien! Letra correcta'
 
 @then('Se muestra mensaje de error porque la letra es equivocada')
 def step_resultado(context):
     if not resultado:
-        assert 'Error! Letra equivocada'
+        return 'Error! Letra equivocada'
         
 @then('Se muestra un mensaje diciendo que gane el juego')
 def step_victoria(context):
     if resultado:
-        assert 'Respuesta correcta! Felicitaciones!'
+        return 'Respuesta correcta! Felicitaciones!'
 
 @then('Se muestra mensaje diciendo que perdi el juego')
 def step_game_over(context):
     if not resultado:
-        assert 'Palabra incorrecta. Fin del juego!'
+        return 'Palabra incorrecta. Fin del juego!'
